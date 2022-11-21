@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="icon" type="image/x-icon" href="./favicon.ico">
+	</head>
+	<body onload='console.log("Body Loaded")'>
+		<div class="container">
+			<h1>Password Generator</h1>
+			<div class="blocks">
+				<div class="form">
+					<!-- <label for="username">Username</label> -->
+					<input placeholder="Username (optional)" id="username" name="username" type="textbox">
+				</div>
+				<div class="form">
+					<!-- <label for="username">Username</label> -->
+					<input placeholder="Service (optional)" id="service" name="service" type="textbox">
+				</div>
+				<div class="strength">
+					<!-- <label for="length">Length</label> -->
+					<input placeholder="Length (8-256)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..[^A-Z.])\./g, '');" pattern="[8-256]+" min="8" max="256" id="length" name="length" type="number" value="16">
+				</div>
+			    <!-- CHECKBOXES WHICH WILL WHAT OUR PASSWORD WILL CONTAIN -->
+				<div class="form">
+					<input class="regular-checkbox" type="checkbox" name="numbers" id="numbers" checked/>
+					<label for="numbers">Numbers</label>
+				</div>
+				<div class="form">
+					<input class="regular-checkbox" type="checkbox" name="uppercase" id="uppercase" />
+					<label for="uppercase">UpperCase</label>
+				</div>
+				<div class="form">
+					<input class="regular-checkbox" type="checkbox" name="symbols" id="symbols" />
+					<label title='!@#$%^&*()' for="symbols">Symbols</label>
+				</div>
+				<div class="form">
+					<input class="regular-checkbox" type="checkbox" name="spaces" id="spaces" />
+					<label for="spaces">Spaces</label>
+				</div>
+				
+			</div>
+			<!-- BUTTON TO GENERATE PASSWORD -->
+			<button title="Generates a new password." id="generate" class="btn-primary">Generate</button>			<div class="generate-form">
+				<div class="flex-row">
+					<span class="uppercase">Password</span>
+					<span title="Copy the password to your clipboard." class="uppercase" id="copy">Copy</span>
+				</div>
+				<div title="Press the 'Generate' button above." class="password">
+				    <!-- HERE WILL BE OUR PASSWORD -->
+					<span id="password"></span>
+				</div>
+			</div>
+		</div>
+	</body'>
+	<script onload='console.log("JS Loaded.")' src="/script.js"></script>
+</html>

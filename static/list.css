@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000a14;
+	color:aliceblue;
+	font-family: Roboto, sans-serif;
+}.container {
+	border-radius: 5px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}.container h1 {
+	margin: 75px 0px 40px 0px;
+}.blocks {
+	width: 50%;
+	font-size: 14px;
+}.pass {
+	border-radius: 5px;
+	background-color: rgb(85, 85, 85);;
+	padding: 15px;
+	margin: 3px;
+} input[type="number"] {
+	border: none;
+	color: white;
+	width: 25%;
+	height: 0px;
+	border-radius: 5px;
+	background-color: rgb(33, 33, 33);
+	-webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield; 
+	padding:15px;
+} 
+
+input[type="checkbox"] {
+	padding: 15px;
+	margin: 3px;
+	scale: 150%;
+	border: 0.1rem solid rgb(0, 0, 0);
+	flex-direction: row;
+	align-items: center;
+	
+}
+input:invalid {
+	border: 1px dashed red;
+}
+/* input[type=number]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+} */
+
+div.strength {
+	border-radius: 5px;
+	background-color: rgb(85, 85, 85);;
+	padding: 15px;
+	margin: 3px;
+}
+.check-form label {
+	margin-left: 10px;
+}.btn-primary {
+	background-color: #2fed6e;
+	border: 0;
+	box-shadow: none;	padding: 7px 35px;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	margin: 20px 0px;
+}.btn-primary:hover {
+	cursor: pointer;
+}.generate-form {
+	background-color: rgb(85, 85, 85);;
+	padding: 15px;
+	margin: 10px;
+	margin-top: 30px;
+	width: 70%;
+	text-align: center;
+	border-radius: 5px;
+}.uppercase {
+	border-radius: 5px;
+	text-transform: uppercase;
+	color: grey;
+	font-size: 12px;
+}.flex-row {
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+}.password {
+	min-height: 10%;
+	border-radius: 5px;
+	word-wrap: break-word;
+    word-break: break-all;
+	margin: 25px 0px;
+	font-size: 24px;
+	font-weight: bolder;
+	letter-spacing: 2.5px;
+}
+#copy {
+	color:rgb(255, 255, 255);
+	font-weight:bolder;
+	/* text-decoration: underline solid crimson 1px; */
+	user-select: none;
+}#copy:hover {
+	cursor: pointer;
+	color:rgb(255, 255, 255);
+	font-weight:bolder;
+	/* text-decoration: underline solid rgb(173, 11, 43) 1px; */
+}@media screen and (max-width: 1280px) {
+	.container {
+		width: 75%;
+	}
+}@media screen and (max-width: 768px) {
+	.blocks {
+		width: 100%;
+	}	.generate-form {
+		width: 100%;
+	}
+}
