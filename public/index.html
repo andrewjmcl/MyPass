@@ -5,8 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Password Generator</title>
-		<link rel="stylesheet" href="/style.css" />
-		<link rel="icon" type="image/x-icon" href="./favicon.ico">
+		<link rel="stylesheet" href="../static/style.css" />
 	</head>
 	<body onload='console.log("Body Loaded")'>
 		<div class="container">
@@ -20,7 +19,7 @@
 					<!-- <label for="username">Username</label> -->
 					<input placeholder="Service (optional)" id="service" name="service" type="textbox">
 				</div>
-				<div class="strength">
+				<div class="form">
 					<!-- <label for="length">Length</label> -->
 					<input placeholder="Length (8-256)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..[^A-Z.])\./g, '');" pattern="[8-256]+" min="8" max="256" id="length" name="length" type="number" value="16">
 				</div>
@@ -38,7 +37,7 @@
 					<label title='!@#$%^&*()' for="symbols">Symbols</label>
 				</div>
 				<div class="form">
-					<input class="regular-checkbox" type="checkbox" name="spaces" id="spaces" />
+					<input class="regular-checkbox inputBox" type="checkbox" name="spaces" id="spaces"/>
 					<label for="spaces">Spaces</label>
 				</div>
 				
@@ -55,6 +54,7 @@
 				</div>
 			</div>
 		</div>
+		<script onload='console.log("JS Loaded.")' src="../static/script.js"></script>
 	</body'>
-	<script onload='console.log("JS Loaded.")' src="/script.js"></script>
+	
 </html>

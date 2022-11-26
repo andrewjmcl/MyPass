@@ -62,8 +62,6 @@ generate.addEventListener("click", () => {
 	if (!username.value) {
 		username.value = "Empty"
 	}
-	console.log(username.value)
 	jsonString = `{"service": "${service.value}", "username": "${username.value}", "password": "${password.innerText = result.join("")}"}`
-	fetch(`http://andrewjmcl.local/api/${jsonString}`,{"method":"POST"});
 	console.log(jsonString)
 });
